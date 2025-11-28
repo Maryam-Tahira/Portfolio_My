@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Certifications</title>
+    
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    <!-- Bootstrap Icons CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <style>
+        /* =================================== */
+        /* 1. Custom Variables (Aqua Blue Theme) */
+        /* =================================== */
+
+        :root {
+            /* Primary Color: Deep Ocean Blue (Main Background - RGB: 0, 49, 83) */
+            --bs-primary: #003153; 
+            
+            /* Navbar/Card Darker Background (Contrast - RGB: 0, 37, 64) */
+            --bs-card-dark-bg: #002540; 
+            
+            /* Secondary Light: Light Pastel Blue/Cyan (Alternating Background) */
+            --bs-secondary-lighter: #e0f0f8;
+
+            /* Accent Color: Bright Aqua Blue/Cyan (High Contrast Highlights) */
+            --bs-accent: #00FFFF; 
+            
+            /* Font family */
+            --bs-font-sans-serif: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        /* Global Text and Background Overrides */
+        body {
+            background-color: var(--bs-primary);
+            font-family: var(--bs-font-sans-serif);
+            line-height: 1.6;
+            color: #fff; /* Default text color is white */
+        }
+
+        /* Custom Background Classes */
+        .bg-primary { background-color: var(--bs-primary) !important; }
+        .bg-navbar-dark { background-color: var(--bs-card-dark-bg) !important; } /* নেভিগেশন বারের জন্য গাঢ় রঙ */
+        
+        /* Accent Styling (Aqua Blue) */
+        .text-accent { color: var(--bs-accent) !important; }
+        
+        /* Section Title Styling */
+        .section-title {
+            font-weight: 700;
+            position: relative;
+            padding-bottom: 10px;
+            color: #fff; 
+            font-size: 2.5rem; /* শিরোনামের ফন্টের সাইজ */
+        }
+        .section-title::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0;
+            width: 80px; /* শিরোনামের নিচের দাগের দৈর্ঘ্য */
+            height: 4px;
+            background-color: var(--bs-accent);
+            border-radius: 5px;
+        }
+
+        /* Card Styling for Certificates */
+        .card-dark-bg {
+            background-color: var(--bs-card-dark-bg); 
+            border: 1px solid var(--bs-primary);
+            color: #fff;
+            border-radius: 10px; /* কার্ডের কোনাগুলো গোল করা */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card-dark-bg:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), 0 0 15px var(--bs-accent); /* হোভার করলে শ্যাডো এবং অ্যাকসেন্ট গ্লো */
+        }
+
+        /* Accent border on the left side of the card */
+        .border-accent-left {
+            border-left: 5px solid var(--bs-accent) !important;
+            border-right: none;
+            border-top: none;
+            border-bottom: none;
+        }
+        
+        /* বাটন স্টাইল */
+        .btn-outline-accent { 
+            color: var(--bs-accent) !important; 
+            border-color: var(--bs-accent) !important; 
+            transition: all 0.3s;
+        }
+        .btn-outline-accent:hover { 
+            background-color: var(--bs-accent); 
+            color: var(--bs-primary) !important; 
+            border-color: var(--bs-accent);
+        }
+
+        /* নেভিগেশন লিঙ্ক স্টাইল */
+        .navbar-nav .nav-link {
+            color: white !important;
+            transition: color 0.3s;
+        }
+        .navbar-nav .nav-link:hover {
+            color: var(--bs-accent) !important;
+        }
+
+    </style>
+</head>
+<body class="text-white">
+
+    <!-- ১. নেভিগেশন বার (Navbar) -->
+    <!-- এটি Main Page-এর Navbar-এর মতোন, কিন্তু একটি গাঢ় নীল রঙে সেট করা হয়েছে -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-navbar-dark sticky-top shadow-lg">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-accent" href="#">Maryam Tahira</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <!-- এই লিঙ্কগুলো আপনার Main Page-এর নির্দিষ্ট সেকশনগুলিতে নির্দেশ করবে -->
+                    <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+                   
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="certificates.html">Certificates</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#experiences">Moments</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ২. সার্টিফিকেশন সেকশন (Certifications Section) -->
+    <section id="certificates" class="py-5 py-md-5 bg-primary text-white">
+        <div class="container">
+            <div class="text-center pt-5 pb-4">
+               
+                <h2 class="section-title mb-5">🏆 My Certificates </h2>
+            </div>
+            
+            <!-- সার্টিফিকেশন কার্ডের গ্রিড -->
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 pb-5">
+                
+                <!-- সার্টিফিকেট কার্ড ১ -->
+                
+
+                <!-- সার্টিফিকেট কার্ড ২ -->
+                <div class="col">
+                    <div class="card h-100 certificate-card card-dark-bg border-accent-left shadow">
+                        <img src="im2.jpeg" alt="certificate image">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">Associate of content and Branding-2024</h5>
+                            <p class="card-text text-white-50">By Hult prize organizing club and Teachers</p>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <!-- সার্টিফিকেট কার্ড ৩ -->
+                <div class="col">
+                    <div class="card h-100 certificate-card card-dark-bg border-accent-left shadow">
+                        <img src="im4.jpeg" class="card-img-top" alt="certificate image">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">Certificate of Participation and in top 5 team</h5>
+                            <p class="card-text text-white-50">By Hult Prize club</p>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- আরো কার্ড যোগ করুন -->
+                <div class="col">
+                    <div class="card h-100 certificate-card card-dark-bg border-accent-left shadow">
+                        <img src="im5.jpeg" class="card-img-top" alt="certificate image">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">Certificate of completion of HTML </h5>
+                            <p class="card-text text-white-50">By Udemy</p>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col">
+                    <div class="card h-100 certificate-card card-dark-bg border-accent-left shadow">
+                        <img src="im8.jpeg" class="card-img-top" alt="certificate image">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">Certificate of participation in ICRCS-2025</h5>
+                            <p class="card-text text-white-50">By IEEE Computer Society</p>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col">
+                    <div class="card h-100 certificate-card card-dark-bg border-accent-left shadow">
+                        <img src="im6.jpeg" class="card-img-top" alt="certificate image">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">Participate on Cyber Security and Ethical Hacking Seminer</h5>
+                            <p class="card-text text-white-50">By IIUC Computer Club</p>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 certificate-card card-dark-bg border-accent-left shadow">
+                        <img src="im1.jpeg" class="card-img-top" alt="participant img">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">Certificate of Participants in Effective leadership session</h5>
+                            <p class="card-text text-white-50">By Bangla Innovator </p>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 certificate-card card-dark-bg border-accent-left shadow">
+                        <img src="im3.jpeg" class="card-img-top" alt="participant img">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">Certificate of Competing in problem solving - DigiTact-2025 </h5>
+                            <p class="card-text text-white-50">By CIU and Istern Bank PLC</p>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- ৩. ফুটার (Footer) -->
+    <footer class="bg-navbar-dark text-white py-3 border-top border-accent">
+        <div class="container text-center">
+            <p class="mb-0 fs-6">&copy; 2025 Maryam Tahira. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</body>
+</html>

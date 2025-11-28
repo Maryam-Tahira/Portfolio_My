@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maryam Tahira - Moments & Experiences</title>
+    
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    <!-- Bootstrap Icons CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <style>
+        /* =================================== */
+        /* 1. Custom Variables (Aqua Blue Theme) */
+        /* =================================== */
+
+        :root {
+            /* Primary Color: Deep Ocean Blue (Main Background) */
+            --bs-primary: #003153; 
+            
+            /* Navbar/Card Darker Background (Contrast) */
+            --bs-card-dark-bg: #002540; 
+            
+            /* Accent Color: Bright Aqua Blue/Cyan (High Contrast Highlights) */
+            --bs-accent: #00FFFF; 
+            
+            /* Font family */
+            --bs-font-sans-serif: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        /* Global Text and Background Overrides */
+        body {
+            background-color: var(--bs-primary);
+            font-family: var(--bs-font-sans-serif);
+            line-height: 1.6;
+            color: #fff; /* Default text color is white */
+        }
+
+        /* Custom Background Classes */
+        .bg-primary { background-color: var(--bs-primary) !important; }
+        .bg-navbar-dark { background-color: var(--bs-card-dark-bg) !important; } /* Darker background for navbar */
+        
+        /* Accent Styling (Aqua Blue) */
+        .text-accent { color: var(--bs-accent) !important; }
+        
+        /* Section Title Styling */
+        .section-title {
+            font-weight: 700;
+            position: relative;
+            padding-bottom: 10px;
+            color: #fff; 
+            font-size: 2.5rem; 
+        }
+        .section-title::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0;
+            width: 80px; 
+            height: 4px;
+            background-color: var(--bs-accent);
+            border-radius: 5px;
+        }
+
+        /* =================================== */
+        /* 2. Moments Card Styling (Fixed Height) */
+        /* =================================== */
+
+        .moment-card {
+            background-color: var(--bs-card-dark-bg);
+            border: 1px solid var(--bs-primary);
+            color: #fff;
+            border-radius: 10px;
+            overflow: hidden; 
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .moment-card:hover {
+            transform: translateY(-8px); 
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7), 0 0 10px var(--bs-accent); 
+        }
+
+        /* Image Container */
+        .card-img-container {
+            height: 250px; /* Fixed height for all images */
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 3px solid var(--bs-accent); 
+        }
+        
+        /* Image Style - Object Fit Cover */
+        .card-img-top {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+            transition: transform 0.5s ease;
+        }
+
+        .moment-card:hover .card-img-top {
+            transform: scale(1.05); 
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        /* Navigation Link Style */
+        .navbar-nav .nav-link {
+            color: white !important;
+            transition: color 0.3s;
+        }
+        .navbar-nav .nav-link:hover {
+            color: var(--bs-accent) !important;
+        }
+    </style>
+</head>
+<body class="text-white">
+
+    <!-- 1. Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-navbar-dark sticky-top shadow-lg">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-accent" href="#">Maryam Tahira</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <!-- Links targetting the main page, 'Moments' is active -->
+                    <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+                    
+                    <li class="nav-item"><a class="nav-link" href="certificates.html">Certificates</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="Momnets.html">Moments</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2. Moments Section -->
+    <section id="moments" class="py-5 py-md-5 bg-primary text-white">
+        <div class="container">
+            <div class="text-center pt-5 pb-4">
+                <p class="h4 text-accent mb-2">Memories & Milestones</p>
+                <h2 class="section-title mb-5">📸 My Moments and Experiences</h2>
+            </div>
+            
+            <!-- Moments Card Grid -->
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 pb-5">
+                
+                <!-- Moment Card 1: Team Building -->
+                <div class="col">
+                    <div class="moment-card shadow">
+                        <div class="card-img-container">
+                            <!-- Placeholder Image - Replace with your actual image link -->
+                            <img src="h1.jpeg" class="card-img-top" alt="Certificate giving">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title text-accent">OIC Member</h5>
+                            <p class="card-text text-white-50 small">Got Certificate as Associate content and branding at Hult prize IIUC Club</p>
+                            
+                            <span class="badge bg-primary rounded-pill border border-accent text-accent">#Teamwork</span>
+                            <span class="badge bg-primary rounded-pill border border-accent text-accent">#Editing and writing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Moment Card 2: Hackathon Winner -->
+                <div class="col">
+                    <div class="moment-card shadow">
+                        <div class="card-img-container">
+                            <!-- Placeholder Image - Replace with your actual image link -->
+                            <img src="c1.jpeg" class="card-img-top" alt="caro vol">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title text-accent">Caro Volenteer</h5>
+                            <p class="card-text text-white-50 small">Joined caro and after a long time got title as volenteer and video editor</p>
+                            <span class="badge bg-primary rounded-pill border border-accent text-accent">#volenteer</span>
+                            <span class="badge bg-primary rounded-pill border border-accent text-accent">#Video Editor</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Moment Card 3: Conference Speaker -->
+                <div class="col">
+                    <div class="moment-card shadow">
+                        <div class="card-img-container">
+                            <!-- Placeholder Image - Replace with your actual image link -->
+                            <img src="h2.jpeg" class="card-img-top" alt="Tech Conference Speech">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title text-accent">Associate Content and Brading</h5>
+                            <p class="card-text text-white-50 small">Did editing and post correcting and writing for club promotion</p>
+                            <span class="badge bg-primary rounded-pill border border-accent text-accent">#writing</span>
+                            <span class="badge bg-primary rounded-pill border border-accent text-accent">#checking</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Moment Card 4: Project Launch -->
+                <div class="col">
+                    <div class="moment-card shadow">
+                        <div class="card-img-container">
+                            <!-- Placeholder Image - Replace with your actual image link -->
+                            <img src="bI.jpeg" class="card-img-top" alt="Project Launch Night">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title text-accent">Vlenteer at BI</h5>
+                            <p class="card-text text-white-50 small">Participating at Various event</p>
+                            <span class="badge bg-primary rounded-pill border border-accent text-accent">#Speaking</span>
+                            <span class="badge bg-primary rounded-pill border border-accent text-accent">#Listing</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Moment Card 5: Mentorship -->
+                <div class="col">
+                    <div class="moment-card shadow">
+                        <div class="card-img-container">
+                            <!-- Placeholder Image - Replace with your actual image link -->
+                            <img src="BI2.jpeg" class="card-img-top" alt="Mentorship Session">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title text-accent">Team Meeting for Campus Evenet</h5>
+                            <p class="card-text text-white-50 small">Meeting to do campus work with our team</p>
+                            <span class="badge bg-primary rounded-pill border border-accent text-accent">#Mentoring</span>
+                            <span class="badge bg-primary rounded-pill border border-accent text-accent">#Guidance</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Moment Card 6: Certification Day -->
+                <div class="col">
+                    <div class="moment-card shadow">
+                        <div class="card-img-container">
+                            <!-- Placeholder Image - Replace with your actual image link -->
+                            <img src="ch.jpeg" class="card-img-top" alt="Certification Day">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title text-accent">Teaching Mendarin Chinese</h5>
+                            <p class="card-text text-white-50 small">Taught HSK 1 and 2</p>
+                            <span class="badge bg-primary rounded-pill border border-accent text-accent">#Teaching</span>
+                            <span class="badge bg-primary rounded-pill border border-accent text-accent">#Chinese</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="moment-card shadow">
+                        <div class="card-img-container">
+                            <!-- Placeholder Image - Replace with your actual image link -->
+                            <img src="ii.jpeg" class="card-img-top" alt="Certification Day">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title text-accent">Speaker at International Program</h5>
+                            <p class="card-text text-white-50 small">Given speech at an internatinal program which was held between Ghana, Bd, India , Dubai</p>
+                            <span class="badge bg-primary rounded-pill border border-accent text-accent">#Teaching</span>
+                            <span class="badge bg-primary rounded-pill border border-accent text-accent">#speaking</span>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Footer -->
+    <footer class="bg-navbar-dark text-white py-3 border-top border-accent">
+        <div class="container text-center">
+            <p class="mb-0 fs-6">&copy; 2025 Maryam Tahira. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</body>
+</html>

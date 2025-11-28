@@ -1,0 +1,231 @@
+/* =================================== */
+/* 1. Custom Variables (Deep Ocean Blue Theme) */
+/* =================================== */
+
+:root {
+    /* Primary Color: Deep Ocean Blue (Main Background - RGB: 0, 49, 83) */
+    --bs-primary: #003153; 
+    
+    /* Secondary Light: Light Pastel Blue/Cyan (Alternating Background - RGB: 224, 240, 248) */
+    --bs-secondary-lighter: #e0f0f8;
+
+    /* Card Background Color (Slightly darker than primary) */
+    --bs-card-dark-bg: #002540;
+
+    /* Accent Color: Bright Orange/Red (For highlights and links) */
+    --bs-accent: #ff4500; 
+    
+    /* Font family */
+    --bs-font-sans-serif: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Global Text and Background Overrides */
+body {
+    background-color: var(--bs-primary);
+    font-family: var(--bs-font-sans-serif);
+    line-height: 1.6;
+    color: #fff; /* Default text color for the body (dark sections) */
+}
+
+/* Bootstrap class overrides */
+.bg-primary { background-color: var(--bs-primary) !important; }
+.bg-secondary-lighter { background-color: var(--bs-secondary-lighter) !important; }
+
+/* Text color for the light background section (About/Moments) */
+.bg-secondary-lighter .text-dark, 
+.bg-secondary-lighter .text-secondary { 
+    color: #640707 !important; /* Dark text for readability on light blue */
+}
+
+
+/* Accent Styling */
+.text-accent { color: var(--bs-accent) !important; }
+.btn-accent { 
+    background-color: var(--bs-accent); 
+    border-color: var(--bs-accent); 
+    color: var(--bs-primary) !important; /* Text on button is the primary dark color */
+}
+.btn-accent:hover { 
+    background-color: #912804; 
+    border-color: #6e2007;
+}
+.btn-outline-light, .btn-outline-accent { 
+    color: #fff !important; 
+    border-color: #fff !important; 
+}
+.btn-outline-accent:hover { 
+    background-color: var(--bs-accent); 
+    color: var(--bs-primary) !important; 
+    border-color: var(--bs-accent);
+}
+
+/* =================================== */
+/* 2. Hero Section Styles              */
+/* =================================== */
+
+.hero-section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+/* Custom Profile Photo Styling (Circular Glow Effect) */
+.profile-photo-container {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    /* Subtle glow matching the accent color */
+    box-shadow: 0 0 0 10px #fff, 0 0 0 20px rgba(255, 69, 0, 0.05);
+}
+
+.profile-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    border: 5px solid var(--bs-primary);
+}
+
+/* Skill Tags in Hero Section */
+.skill-tag {
+    background-color: var(--bs-card-dark-bg);
+    color: #aaa;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+.skill-tag:hover {
+    background-color: #1a4d71; /* Darker blue on hover */
+    color: #fff;
+}
+
+/* =================================== */
+/* 3. About & Service Styles           */
+/* =================================== */
+
+/* Blocks in the About section (Service Icons) */
+.service-icon-block {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background-color: var(--bs-primary); /* Use deep blue for blocks on the light blue background */
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+.service-icon-block:hover {
+    background-color: #00406b;
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* =================================== */
+/* 4. Certificates & Cards             */
+/* =================================== */
+
+.section-title {
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 10px;
+    color: #fff; 
+}
+.section-title::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 60px;
+    height: 3px;
+    background-color: var(--bs-accent);
+    border-radius: 5px;
+}
+
+/* Card Styling for Certificates */
+.card-dark-bg {
+    background-color: var(--bs-card-dark-bg); /* Use the card background variable */
+    border: 1px solid var(--bs-primary);
+    color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-dark-bg:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Accent border on the left side of the card */
+.border-accent-left {
+    border-left: 5px solid var(--bs-accent) !important;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+}
+
+/* =================================== */
+/* 5. Experience Carousel Styles       */
+/* =================================== */
+
+.carousel-img {
+    height: 500px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+    padding: 10px 20px;
+    bottom: 20px;
+    left: 5%;
+    right: auto;
+    width: 40%;
+}
+
+/* =================================== */
+/* 6. Contact & Footer                 */
+/* =================================== */
+
+.icon-link {
+    font-size: 2.5rem;
+    margin: 0 15px;
+    color: #aaa; 
+    transition: color 0.3s ease;
+}
+
+.icon-link:hover {
+    color: var(--bs-accent);
+}
+
+.hover-accent:hover {
+    color: var(--bs-accent) !important;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .profile-photo-container {
+        width: 250px;
+        height: 250px;
+        margin-top: 30px;
+    }
+    .hero-section {
+        text-align: center;
+    }
+    .d-flex.gap-3 {
+        justify-content: center;
+    }
+    .carousel-img {
+        height: 300px;
+    }
+    .carousel-caption {
+        width: 80%;
+        left: 10%;
+        right: 10%;
+        bottom: 5px;
+        text-align: center !important;
+    }
+}
